@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PHY101 ePortfolio · Fundamentals of Physics</title>
+  <meta name="description" content="Student ePortfolio for PHY101 Fundamentals of Physics — mechanics, waves, electromagnetism, optics, and quantum phenomena." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="field-canvas" aria-hidden="true"></canvas>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>
+          <strong>PHY101</strong>
+          <small>ePortfolio</small>
+        </span>
+      </a>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#units">Units</a>
+        <a href="#labs">Labs</a>
+        <a href="#practice">Practice</a>
+        <a href="#reflect">Reflection</a>
+        <a href="#resources">Resources</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle light mode">
+          <span class="sun">☀</span>
+          <span class="moon">☾</span>
+        </button>
+        <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <p class="eyebrow">Sherubtse College · Royal University of Bhutan</p>
+      <h1>Fundamentals of Physics,<br /><em>made visible.</em></h1>
+      <p class="lede">
+        A living record of classwork, homework, laboratory work, and personal insight
+        from PHY101 — Autumn Semester 2026, Bachelor of Science in Chemistry, Semester I.
+      </p>
+      <div class="hero-meta">
+        <div>
+          <span class="label">Module</span>
+          <strong>PHY101 · 120 credit hours</strong>
+        </div>
+        <div>
+          <span class="label">Tutor</span>
+          <strong>Shacha Thinley</strong>
+        </div>
+        <div>
+          <span class="label">Weighting</span>
+          <strong>ePortfolio 10%</strong>
+        </div>
+        <div>
+          <span class="label">Prepared by</span>
+          <strong>Your Name</strong>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a class="btn primary" href="#units">Explore units</a>
+        <a class="btn ghost" href="#reflect">Read reflections</a>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Module snapshot">
+      <article><span data-count="5">0</span><small>Core units</small></article>
+      <article><span data-count="5">0</span><small>Laboratory experiments</small></article>
+      <article><span data-count="12">0</span><small>Learning outcomes</small></article>
+      <article><span data-count="8">0</span><small>Study hours / week</small></article>
+    </section>
+
+    <section id="about" class="panel">
+      <div class="section-head">
+        <p class="eyebrow">Purpose</p>
+        <h2>Why this portfolio exists</h2>
+      </div>
+      <div class="split">
+        <div>
+          <p>
+            PHY101 is designed to build a rigorous analytical mindset by connecting conceptual
+            physics with mathematical modelling and experimental checks. This ePortfolio is not
+            a dump of notes. It is a curated trail of how I solved problems, where I got stuck,
+            what the laboratory actually taught me, and how the five units talk to each other.
+          </p>
+          <p>
+            The module objective is to give a theoretical, quantitative, and practical framework
+            for analysing complex physical phenomena — from calculus-based kinematics through
+            Faraday’s law to the photoelectric effect. I organised the site the same way the
+            work plan is organised: units, labs, assessment, then extra reading.
+          </p>
+        </div>
+        <aside class="callout">
+          <h3>How to navigate</h3>
+          <ul>
+            <li>Filter units by theme.</li>
+            <li>Open a worked example to see the method, not only the answer.</li>
+            <li>Run the wave lab to feel superposition.</li>
+            <li>Try the concept check — it is scored locally, nothing is uploaded.</li>
+          </ul>
+        </aside>
+      </div>
+
+      <h3 class="subhead">Learning outcomes I am tracking</h3>
+      <ul class="outcome-grid" id="outcomes">
+        <li>Solve calculus-based kinematics and dynamics with friction and momentum.</li>
+        <li>Apply the work–energy theorem to conservative and non-conservative systems.</li>
+        <li>Examine wave propagation with the 1-D wave equation and superposition.</li>
+        <li>Relate amplitude, power, and intensity in mechanical and acoustic waves.</li>
+        <li>Analyse electromagnetic induction with Ampère’s and Faraday’s laws.</li>
+        <li>Construct interference and diffraction with complex exponential waves.</li>
+        <li>Interpret polarisation, including Malus’ and Brewster’s laws.</li>
+        <li>Compare laser light with incoherent sources.</li>
+        <li>Read energy quantisation from blackbody, photoelectric, and Compton data.</li>
+        <li>Critique simultaneous measurement using duality and Heisenberg’s principle.</li>
+        <li>Conduct experiments with standard laboratory procedure.</li>
+        <li>Investigate natural phenomena with fundamental physics principles.</li>
+      </ul>
+    </section>
+
+    <section id="units" class="panel">
+      <div class="section-head">
+        <p class="eyebrow">August – November</p>
+        <h2>Units, notes, and worked classwork</h2>
+        <p>Each card holds the idea in one sentence, a note from class, and a homework-style solution. Open the accordion for the full argument.</p>
+      </div>
+
+      <div class="filters" role="tablist" aria-label="Filter units">
+        <button class="chip active" data-filter="all" type="button">All units</button>
+        <button class="chip" data-filter="mechanics" type="button">I Mechanics</button>
+        <button class="chip" data-filter="waves" type="button">II Waves</button>
+        <button class="chip" data-filter="em" type="button">III EM</button>
+        <button class="chip" data-filter="optics" type="button">IV Optics</button>
+        <button class="chip" data-filter="quantum" type="button">V Photons</button>
+      </div>
+
+      <div class="unit-list" id="unit-list">
+        <article class="unit" data-unit="mechanics">
+          <button class="unit-toggle" type="button" aria-expanded="false">
+            <span class="unit-tag">Unit I · August</span>
+            <h3>Mechanics</h3>
+            <p>Motion is a differential equation first, a story second.</p>
+            <span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="unit-body">
+            <div class="note-block">
+              <h4>Class notes</h4>
+              <p>
+                In an inertial frame, Newton’s second law is <em>F = dp/dt</em>, not merely <em>ma</em>.
+                With variable mass or momentum transfer that distinction matters. Friction and air
+                resistance are not “errors” — they are force laws. Dry friction saturates at
+                <em>μN</em>; linear drag is <em>−bv</em>; quadratic drag is <em>−cv|v|</em>.
+                The work–energy theorem still holds: the work of every force equals ΔK, while
+                only conservative forces can be stored as potential energy.
+              </p>
+              <p>
+                Impulse is the time-integral of force and equals Δp. In collisions I now ask two
+                questions separately: is momentum conserved (external impulse ≈ 0)? is kinetic
+                energy conserved (elastic)? Mixing those two questions was the most common
+                homework mistake in the first fortnight.
+              </p>
+            </div>
+            <div class="example">
+              <h4>Homework · kinematics with drag</h4>
+              <p class="prompt">A raindrop of mass <em>m</em> falls from rest under gravity with linear drag <em>F<sub>d</sub> = −bv</em>. Find <em>v(t)</em> and the terminal speed.</p>
+              <p>
+                Equation of motion: <em>m dv/dt = mg − bv</em>. Separate variables:
+                <em>dv / (mg − bv) = dt / m</em>. Integrate from 0 to <em>v</em> and 0 to <em>t</em>:
+              </p>
+              <p class="formula">v(t) = (mg/b) (1 − e<sup>−(b/m)t</sup>)</p>
+              <p>
+                Terminal speed is the limit <em>v<sub>∞</sub> = mg/b</em>. The exponential is not decoration:
+                it is the signature that the unbalanced force shrinks as speed grows. If the drop
+                were in vacuum, <em>v = gt</em> with no bound. Nature puts a bound in because air is a
+                momentum reservoir.
+              </p>
+            </div>
+            <div class="example">
+              <h4>Classwork · inelastic collision</h4>
+              <p class="prompt">A 0.25 kg dart at 12 m s<sup>−1</sup> embeds in a 1.75 kg block at rest on a frictionless rail. Find the common speed and the fractional kinetic-energy loss.</p>
+              <p>
+                Momentum: <em>(0.25)(12) = (2.00) v ⇒ v = 1.5 m s<sup>−1</sup></em>.
+                Initial K = 18 J; final K = 2.25 J; 87.5% of the kinetic energy is not “lost to nowhere”
+                — it becomes internal energy (deformation, heat, sound). The work–energy theorem still
+                accounts for it; mechanical energy is simply not conserved.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="unit" data-unit="waves">
+          <button class="unit-toggle" type="button" aria-expanded="false">
+            <span class="unit-tag">Unit II · August</span>
+            <h3>Waves</h3>
+            <p>A wave is a travelling pattern, not a travelling medium.</p>
+            <span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="unit-body">
+            <div class="note-block">
+              <h4>Class notes</h4>
+              <p>
+                A harmonic wave <em>y(x,t) = A cos(kx − ωt + φ)</em> is a solution of the one-dimensional
+                wave equation <em>∂²y/∂x² = (1/v²) ∂²y/∂t²</em> with <em>v = ω/k</em>. Superposition is
+                linear: if <em>y<sub>1</sub></em> and <em>y<sub>2</sub></em> are solutions, so is their sum.
+                Beats are the audible consequence of two close frequencies — the envelope frequency is
+                <em>|f<sub>1</sub> − f<sub>2</sub>|</em>.
+              </p>
+              <p>
+                Intensity for a spherical wave falls as 1/r² because power is spread over area
+                <em>4πr²</em>. Amplitude, not frequency, sets the energy carried by a mechanical wave
+                of given impedance: average power <em>P ∝ A² ω²</em>.
+              </p>
+            </div>
+            <div class="example">
+              <h4>Interactive · superposition</h4>
+              <p>Drag the sliders. Constructive interference is not a special trick; it is what linearity looks like when two crests occupy the same place.</p>
+              <div class="wave-lab">
+                <canvas id="wave-canvas" width="800" height="220"></canvas>
+                <div class="sliders">
+                  <label>Amplitude 1 <input id="amp1" type="range" min="10" max="70" value="40" /></label>
+                  <label>Amplitude 2 <input id="amp2" type="range" min="10" max="70" value="28" /></label>
+                  <label>Frequency 2 <input id="freq2" type="range" min="1" max="4" step="0.1" value="1.6" /></label>
+                  <label>Phase <input id="phase" type="range" min="0" max="6.28" step="0.01" value="0" /></label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="unit" data-unit="em">
+          <button class="unit-toggle" type="button" aria-expanded="false">
+            <span class="unit-tag">Unit III · September</span>
+            <h3>Electromagnetism &amp; circuits</h3>
+            <p>A changing field is already a current, whether or not a wire is there.</p>
+            <span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="unit-body">
+            <div class="note-block">
+              <h4>Class notes</h4>
+              <p>
+                Faraday’s law: <em>ℰ = −dΦ<sub>B</sub>/dt</em>. The minus sign is Lenz’s law — induced
+                current fights the change that produced it. Inductance stores energy
+                <em>U = ½LI²</em> in the magnetic field, the dual of a capacitor’s
+                <em>½CV²</em>. In matter, magnetisation modifies <em>B</em> through permeability;
+                we must not treat vacuum formulae as universal.
+              </p>
+              <p>
+                Transient RC and RL circuits are first-order ODEs. The time constant
+                <em>τ = RC</em> or <em>L/R</em> is the clock of the circuit. LC oscillation is the
+                electromagnetic analogue of a mass-spring: energy sloshes between electric and
+                magnetic forms at <em>ω = 1/√(LC)</em>.
+              </p>
+            </div>
+            <div class="example">
+              <h4>Homework · discharging capacitor</h4>
+              <p class="prompt">A 4.7 μF capacitor charged to 12 V discharges through 10 kΩ. Find τ and the current at t = τ.</p>
+              <p>
+                <em>τ = RC = 4.7×10<sup>−6</sup> × 10<sup>4</sup> = 47 ms</em>.
+                <em>I(t) = (V<sub>0</sub>/R) e<sup>−t/τ</sup></em>, so at t = τ,
+                <em>I = (1.2 mA)/e ≈ 0.44 mA</em>.
+                After one time constant the capacitor still holds 37% of its charge — “almost empty”
+                is a laboratory myth. This same curve appears in Practical 4.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="unit" data-unit="optics">
+          <button class="unit-toggle" type="button" aria-expanded="false">
+            <span class="unit-tag">Unit IV · September</span>
+            <h3>Optics</h3>
+            <p>Light is an electromagnetic wave that we often meet as a complex exponential.</p>
+            <span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="unit-body">
+            <div class="note-block">
+              <h4>Class notes</h4>
+              <p>
+                Writing a wave as <em>Ã e<sup>i(kx−ωt)</sup></em> turns interference into addition of
+                phasors. Thin-film colours (soap, oil) are path-length plus a possible π phase shift
+                on reflection from a higher-index surface. Single-slit minima sit at
+                <em>a sinθ = mλ</em>; a grating’s principal maxima at <em>d sinθ = mλ</em> — the
+                same geometry, opposite use (spread a spectrum vs. kill it).
+              </p>
+              <p>
+                Malus: <em>I = I<sub>0</sub> cos²θ</em>. Brewster’s angle
+                <em>tan θ<sub>B</sub> = n₂/n₁</em> produces fully polarised reflected light.
+                Laser light is collimated, monochromatic, and temporally coherent; a lamp is none
+                of those, even if it is bright.
+              </p>
+            </div>
+            <div class="example">
+              <h4>Homework · soap film</h4>
+              <p class="prompt">A soap film (n = 1.33) in air looks bright in reflected 550 nm light at normal incidence. Find the smallest thickness.</p>
+              <p>
+                Front surface: air→film, phase flip. Back surface: film→air, no flip. Constructive
+                reflection then needs <em>2nt = λ/2</em> for the smallest t, so
+                <em>t = λ/(4n) ≈ 103 nm</em>.
+                The colour is not “in the soap”; it is a decision the wave makes after two journeys.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="unit" data-unit="quantum">
+          <button class="unit-toggle" type="button" aria-expanded="false">
+            <span class="unit-tag">Unit V · September</span>
+            <h3>Photons and matter waves</h3>
+            <p>Energy comes in packets; particles come with wavelengths.</p>
+            <span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="unit-body">
+            <div class="note-block">
+              <h4>Class notes</h4>
+              <p>
+                Classical Rayleigh–Jeans radiation diverges in the ultraviolet; Planck’s
+                <em>E = nhf</em> cuts the catastrophe. Einstein’s photoelectric equation
+                <em>K<sub>max</sub> = hf − φ</em> explains why intensity never starts the effect
+                below threshold frequency. Compton scattering
+                <em>Δλ = (h/m<sub>e</sub>c)(1 − cosθ)</em> treats the photon as a particle with
+                momentum <em>p = h/λ</em>.
+              </p>
+              <p>
+                de Broglie reverses the arrow: <em>λ = h/p</em> for matter. The electron double-slit
+                experiment is the least comfortable fact in the module — a single electron still
+                builds an interference pattern. Heisenberg
+                <em>Δx Δp ≥ ħ/2</em> is not a complaint about apparatus quality; it is a limit on
+                what a wave packet can mean by “position” and “momentum” at once.
+              </p>
+            </div>
+            <div class="example">
+              <h4>Homework · photoelectric threshold</h4>
+              <p class="prompt">Sodium has work function 2.28 eV. Find the threshold wavelength and K<sub>max</sub> for 400 nm light.</p>
+              <p>
+                <em>λ<sub>0</sub> = hc/φ</em>. With <em>hc ≈ 1240 eV·nm</em>,
+                <em>λ<sub>0</sub> ≈ 544 nm</em>. For 400 nm, <em>hf = 3.10 eV</em>, so
+                <em>K<sub>max</sub> = 0.82 eV</em>.
+                Bluer light raises stopping potential; brighter light only raises the number of
+                electrons. That split is the experimental fingerprint of quantisation.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="labs" class="panel">
+      <div class="section-head">
+        <p class="eyebrow">30% of the module</p>
+        <h2>Laboratory practicals</h2>
+        <p>Five experiments, each reported on the VLE. Click a card for aim, key relation, and what I actually learned at the bench.</p>
+      </div>
+      <div class="lab-grid" id="lab-grid">
+        <button class="lab-card" type="button" data-lab="0">
+          <span>01</span>
+          <h3>Free-fall acceleration</h3>
+          <p>g from timed drop, not from a textbook value.</p>
+        </button>
+        <button class="lab-card" type="button" data-lab="1">
+          <span>02</span>
+          <h3>Speed of sound</h3>
+          <p>Resonance tube and standing waves in air.</p>
+        </button>
+        <button class="lab-card" type="button" data-lab="2">
+          <span>03</span>
+          <h3>Young’s double slit</h3>
+          <p>Sodium wavelength from fringe spacing.</p>
+        </button>
+        <button class="lab-card" type="button" data-lab="3">
+          <span>04</span>
+          <h3>RC discharge</h3>
+          <p>Exponential decay and the meaning of τ.</p>
+        </button>
+        <button class="lab-card" type="button" data-lab="4">
+          <span>05</span>
+          <h3>e/m of the electron</h3>
+          <p>Thomson’s ratio from cathode-ray deflection.</p>
+        </button>
+      </div>
+    </section>
+
+    <section id="practice" class="panel">
+      <div class="section-head">
+        <p class="eyebrow">Concept check</p>
+        <h2>Five questions from the work plan</h2>
+        <p>Choose an answer, then reveal the reasoning. The score updates immediately.</p>
+      </div>
+      <div class="quiz" id="quiz"></div>
+      <p class="quiz-score" id="quiz-score" aria-live="polite">Score: 0 / 5</p>
+    </section>
+
+    <section id="reflect" class="panel">
+      <div class="section-head">
+        <p class="eyebrow">Personal insight</p>
+        <h2>Reflections on learning</h2>
+      </div>
+      <div class="reflect-grid">
+        <article>
+          <h3>Units I &amp; II — Mechanics and waves</h3>
+          <p>
+            I arrived treating kinematics as “suvat”. Calculus made the same problems feel
+            unfamiliar until I saw that constant acceleration is just the special case
+            <em>a = dv/dt = constant</em>. Friction stopped being a nuisance term when I had to
+            decide whether energy or momentum was the conserved currency.
+          </p>
+          <p>
+            Waves corrected a school-level habit: I used to say “the particle travels with the
+            wave.” Energy and phase travel; the air molecule mostly oscillates. Superposition
+            clicked only after I drew two sinusoids and added them point by point — the interactive
+            canvas above is the digital version of that notebook sketch.
+          </p>
+        </article>
+        <article>
+          <h3>Units III–V — Fields, light, quanta</h3>
+          <p>
+            Faraday’s minus sign felt pedantic until Lenz’s law saved a sign error in an inductance
+            problem. Optics demanded comfort with complex exponentials; once a wave is a phasor,
+            a diffraction integral is no longer a different subject from interference.
+          </p>
+          <p>
+            Quantum physics is where chemistry and this module meet. The photoelectric effect is
+            why we talk about HOMO–LUMO gaps as energies, not as classical intensities. Heisenberg’s
+            relation still sits uneasily with me: I can compute Δx Δp, but I am still learning to
+            stop treating it as “the measurement disturbed the particle” and start treating it as
+            “the particle was never a point with a sharp p”.
+          </p>
+        </article>
+        <article class="span-2">
+          <h3>What I will do differently before the semester-end exam</h3>
+          <p>
+            I will derive, not memorise, the five laboratory working equations. I will keep a
+            two-column error log: conceptual mix-ups (elastic vs inelastic, intensity vs amplitude)
+            on one side, algebraic slips on the other. Independent study (45 of 120 hours) only
+            works if I close the book and reconstruct the argument. This portfolio is that
+            reconstruction, not a copy of the lecture.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="resources" class="panel">
+      <div class="section-head">
+        <p class="eyebrow">Extra material · criterion</p>
+        <h2>Reading beyond the lecture</h2>
+        <p>Essential texts from the work plan, plus additional online resources I actually used.</p>
+      </div>
+      <div class="resource-cols">
+        <div>
+          <h3>Essential</h3>
+          <ul class="books">
+            <li>Halliday, Resnick &amp; Walker, <em>Fundamentals of Physics</em> (12th ed., 2021)</li>
+            <li>Shankar, <em>Fundamentals of Physics I &amp; II</em> (Yale, 2019–2020)</li>
+            <li>Young &amp; Freedman, <em>University Physics with Modern Physics</em> (15th ed., 2019)</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Additional print</h3>
+          <ul class="books">
+            <li>Serway &amp; Jewett, <em>Physics for Scientists and Engineers</em> (10th ed.)</li>
+            <li>Smith, <em>Waves and Oscillations</em> (OUP, 2010)</li>
+            <li>Knight, <em>Physics for Scientists and Engineers</em> (5th ed., 2022)</li>
+          </ul>
+        </div>
+      </div>
+      <h3 class="subhead">Online resources used in this portfolio</h3>
+      <div class="link-grid">
+        <a href="https://www.feynmanlectures.caltech.edu/" target="_blank" rel="noopener">
+          <strong>The Feynman Lectures</strong>
+          <span>Motion under central forces — a second voice on mechanics.</span>
+        </a>
+        <a href="https://openstax.org/details/books/university-physics-volume-2" target="_blank" rel="noopener">
+          <strong>OpenStax University Physics Vol. 2</strong>
+          <span>Electromagnetism and circuits, freely readable.</span>
+        </a>
+        <a href="https://openstax.org/details/books/university-physics-volume-3" target="_blank" rel="noopener">
+          <strong>OpenStax University Physics Vol. 3</strong>
+          <span>Optics and modern physics for Unit IV and V.</span>
+        </a>
+        <a href="https://www.ck12.org/physics/electromagnetic-waves/lesson/Electromagnetic-Waves-MS-PS/" target="_blank" rel="noopener">
+          <strong>CK-12 Electromagnetic waves</strong>
+          <span>Compact review of the EM spectrum before laser light.</span>
+        </a>
+        <a href="https://courses.lumenlearning.com/suny-physics/chapter/16-3-simple-harmonic-motion-a-special-periodic-motion/" target="_blank" rel="noopener">
+          <strong>Lumen · Simple harmonic motion</strong>
+          <span>Bridge from oscillations into the wave equation.</span>
+        </a>
+        <a href="https://www.lightandmatter.com/" target="_blank" rel="noopener">
+          <strong>Crowell · Light and Matter</strong>
+          <span>Conceptual physics with a light touch, useful before calculations.</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="panel assess">
+      <div class="section-head">
+        <p class="eyebrow">Assessment map</p>
+        <h2>How this module is judged</h2>
+      </div>
+      <div class="bars">
+        <div><span>Reflective writing</span><div class="bar"><i style="--w:10%"></i></div><b>10%</b></div>
+        <div><span>Class tests</span><div class="bar"><i style="--w:10%"></i></div><b>10%</b></div>
+        <div><span>Laboratory work</span><div class="bar"><i style="--w:30%"></i></div><b>30%</b></div>
+        <div><span>This ePortfolio</span><div class="bar accent"><i style="--w:10%"></i></div><b>10%</b></div>
+        <div><span>Semester-end exam</span><div class="bar"><i style="--w:40%"></i></div><b>40%</b></div>
+      </div>
+      <p class="fineprint">
+        Attendance is expected at 100%, with a 10% allowance for documented absence.
+        Plagiarism is referred to the Programme Board of Examiners. All worked examples here
+        are my own reconstructions of class and homework problems, written in my words.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>PHY101 ePortfolio · Fundamentals of Physics · Autumn 2026</p>
+    <p>Replace the learner name in this footer before VLE submission.</p>
+    <p class="tiny">Built with HTML, CSS, and JavaScript · No frameworks · Canvas field &amp; wave lab run locally</p>
+  </footer>
+
+  <dialog id="lab-modal" class="modal">
+    <div class="modal-inner">
+      <button class="icon-btn close" id="modal-close" type="button" aria-label="Close">×</button>
+      <p class="eyebrow" id="modal-kicker"></p>
+      <h3 id="modal-title"></h3>
+      <div id="modal-body"></div>
+    </div>
+  </dialog>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
